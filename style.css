@@ -415,11 +415,6 @@ body, h1, h2, p {
 
 
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
 
     /* Assure que les images ne dépassent pas */
     img {
