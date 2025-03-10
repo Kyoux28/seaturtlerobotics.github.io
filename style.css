@@ -405,25 +405,6 @@ body, h1, h2, p {
     }
 
     /* Ajuste le conteneur du site */
-    body {
-        min-height: 100vh;
-        background-size: cover; /* Assure que l’arrière-plan remplit l’écran */
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
-    /* Ajuste la navigation pour mobile */
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
 
     /* Assure que les images ne dépassent pas */
     img {
