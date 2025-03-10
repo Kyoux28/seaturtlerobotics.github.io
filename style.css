@@ -397,6 +397,10 @@ body, h1, h2, p {
 
 /* ======= Ajustements pour Mobile ======= */
 @media screen and (max-width: 768px) {
+    #home {
+        background-attachment: scroll !important; /* Empêche l'effet de fixation sur mobile */
+        padding-top: 60px; /* Ajoute un espace pour éviter que le home soit caché par la navbar */
+    }
     
     /* Ajuste la hauteur minimale pour éviter les coupures */
     .section {
