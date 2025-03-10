@@ -401,7 +401,7 @@ body, h1, h2, p {
     /* Empêche l'effet de fixation du fond d'écran sur mobile */
     #home {
         background-attachment: scroll !important; 
-        padding-top: 60px; /* Ajoute un espace pour éviter que le home soit caché par la navbar */
+
     }
 
     /* Force un fond blanc dans les sections concernées */
