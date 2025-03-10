@@ -395,18 +395,37 @@ body, h1, h2, p {
 }
 
 
-/* ======= Ajustements pour Mobile ======= */
+/* ======= Correction de l'affichage sur mobile ======= */
 @media screen and (max-width: 768px) {
-    /* Ajuste la hauteur minimale pour éviter les coupures */
+    
+    /* Empêche l'effet de fixation du fond d'écran sur mobile */
+    #home {
+        background-attachment: scroll !important; 
+        padding-top: 60px; /* Ajoute un espace pour éviter que le home soit caché par la navbar */
+    }
+
+    /* Force un fond blanc dans les sections concernées */
+    #the-drone, #team, #telecommunications, #contact {
+        background-color: white !important; /* Fond blanc forcé */
+        background-image: none !important; /* Supprime toute image de fond */
+        padding-top: 50px; /* Ajoute un espace pour éviter que le texte touche la navbar */
+    }
+
+    /* Empêche d'autres images de fond de s'étendre */
     .section {
-        min-height: 100vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
+        min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
         width: 100vw;
-        background-color: white !important; /* Force le fond blanc */
+        background-color: white !important; /* Force le fond blanc partout */
     }
 
     /* Ajuste le conteneur du site */
-
+    body {
+        min-height: 100vh;
+        background-color: white !important;
+        background-image: none !important; /* Supprime toute image de fond potentielle */
+    }
 }
+
 
 /* ======= Navigation fluide ======= */
 .section {
