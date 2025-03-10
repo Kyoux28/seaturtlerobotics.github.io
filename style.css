@@ -127,8 +127,8 @@ body, h1, h2, p {
     padding: 20px; /* Réduit l’espace intérieur */
     position: relative;
     z-index: 3;
-    margin-top: -340px; /* Colle au ruban bleu */
-    margin-left: -30px; /* Moves text closer to the left */
+    margin-top: -640px; /* Colle au ruban bleu */
+    margin-left: -60px; /* Moves text closer to the left */
     
 
 }
