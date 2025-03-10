@@ -119,7 +119,7 @@ body, h1, h2, p {
 
 /* ======= Fond blanc pour toutes les autres sections sauf Home ======= */
 .section:not(#home) {
-    background-image: none !important; /* Supprime toute image de fond restante */
+
     background-color: white !important; /* Force le fond blanc */
     color: black;
     width: 100vw; /* Utilisation de toute la largeur de l'écran */
