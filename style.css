@@ -12,48 +12,7 @@ body, h1, h2, p {
 
 }
 
-/* ======= Ajustements pour Mobile ======= */
-@media screen and (max-width: 768px) {
-    /* Ajuste la hauteur minimale pour éviter l'effet de "fond blanc coupé" */
-    .section {
-        min-height: 100vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
-        width: 100vw; /* S'assure que la largeur prend tout l'écran */
-    }
 
-    /* Ajuste le conteneur du site */
-    body {
-        min-height: 100vh;
-        background-size: cover; /* Assure que l'arrière-plan remplit l'écran */
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
-    /* Centre le contenu si nécessaire */
-    .home-content, .team-text, .drone-container, .telecom-container {
-        text-align: center;
-        width: 90%; /* Réduit la largeur pour s'adapter aux petits écrans */
-        margin: 0 auto;
-    }
-
-    /* Assure que les images ne dépassent pas */
-    img {
-        max-width: 100%; /* Empêche les images d'être trop grandes */
-        height: auto;
-    }
-
-    /* Ajuste la navigation pour mobile */
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-}
 
 /* ======= Barre de navigation ======= */
 .navbar {
