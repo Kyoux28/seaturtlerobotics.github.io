@@ -119,16 +119,17 @@ body, h1, h2, p {
 
 /* ======= Fond blanc pour toutes les autres sections sauf Home ======= */
 .section:not(#home) {
-
+    background-image: none !important; /* Supprime toute image de fond restante */
     background-color: white !important; /* Force le fond blanc */
     color: black;
     width: 100vw; /* Utilisation de toute la largeur de l'écran */
     min-height: 100vh; /* Prend toute la hauteur */
     padding: 20px; /* Réduit l’espace intérieur */
     position: relative;
-    z-index: 3;
-    margin-top: -640px; /* Colle au ruban bleu */
-    margin-left: -60px; /* Moves text closer to the left */
+    z-index: 2;
+    margin-top: -540px; /* Colle au ruban bleu */
+    margin-left: -0px; /* Moves text closer to the left */
+    padding-top: 400px; /* Remonte le contenu visuellement */
     
 
 }
@@ -395,37 +396,42 @@ body, h1, h2, p {
 }
 
 
-/* ======= Correction de l'affichage sur mobile ======= */
+/* ======= Ajustements pour Mobile ======= */
 @media screen and (max-width: 768px) {
-    
-    /* Empêche l'effet de fixation du fond d'écran sur mobile */
-    #home {
-        background-attachment: scroll !important; 
-
-    }
-
-    /* Force un fond blanc dans les sections concernées */
-    #the-drone, #team, #telecommunications, #contact {
-        background-color: white !important; /* Fond blanc forcé */
-        background-image: none !important; /* Supprime toute image de fond */
-
-    }
-
-    /* Empêche d'autres images de fond de s'étendre */
+    /* Ajuste la hauteur minimale pour éviter les coupures */
     .section {
-        min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
+        min-height: 100vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
         width: 100vw;
-        background-color: white !important; /* Force le fond blanc partout */
+        background-color: white !important; /* Force le fond blanc */
     }
 
     /* Ajuste le conteneur du site */
     body {
         min-height: 100vh;
-        background-color: white !important;
-        background-image: none !important; /* Supprime toute image de fond potentielle */
+        background-size: cover; /* Assure que l’arrière-plan remplit l’écran */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* Ajuste la navigation pour mobile */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Assure que les images ne dépassent pas */
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
-
 
 /* ======= Navigation fluide ======= */
 .section {
