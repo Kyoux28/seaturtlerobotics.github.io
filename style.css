@@ -400,8 +400,9 @@ body, h1, h2, p {
     /* Ajuste la hauteur minimale pour éviter les coupures */
     .section {
         min-height: 80vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
-        width: 120vw;
+        width: 100vw;
         background-color: white !important; /* Force le fond blanc */
+        margin-top: 70px; /* Décale toute la section vers le bas */
     }
 
     /* Ajuste le conteneur du site */
