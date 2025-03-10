@@ -413,12 +413,7 @@ body, h1, h2, p {
         background-attachment: fixed;
     }
 
-    /* Ajuste la navigation pour mobile */
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 10px;
-    }
+
 
     .nav-links {
         flex-direction: column;
