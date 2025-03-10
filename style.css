@@ -1,17 +1,408 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Bienvenue sur mon site</h1>
-        <p>Un site simple en HTML, CSS et JS</p>
-    </header>
-    <button id="btn">Clique-moi</button>
-    <script src="script.js"></script>
-</body>
-</html>
+body {
+    background-color: white !important;
+    background-image: none !important;
+}
+
+
+/* ======= Réinitialisation globale ======= */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+/* ======= Barre de navigation ======= */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 50px;
+}
+
+/* Conteneur de gauche : Logo + liens */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo plus petit */
+.logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 15px; /* Espace entre le logo et les titres */
+}
+
+/* Menu de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: #007BFF;
+    border-radius: 5px;
+}
+
+
+
+/* ======= Section Home ======= */
+/* ======= Section Home avec image de fond ======= */
+#home {
+    display: flex !important; /* Assure que Home est toujours affiché */
+    opacity: 1 !important;
+    visibility: visible !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("images/home.png"); /* Image appliquée uniquement ici */
+    background-size: cover;
+    background-position: -50px center; 
+    background-size: cover; /* S'assure que toute la section est remplie */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixe l'image pour éviter le scrolling */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    text-align: flex-start;
+    padding-left: -20px;
+    padding-top: 20px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    background-attachment: scroll; /* Empêche l’image de s'étendre sur d'autres sections */
+
+
+
+    
+    
+}
+
+.section {
+    width: 100vw; /* Toute la largeur de l'écran */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 40px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* ======= Fond blanc pour toutes les autres sections sauf Home ======= */
+.section:not(#home) {
+    background-image: none !important; /* Supprime toute image de fond restante */
+    background-color: white !important; /* Force le fond blanc */
+    color: black;
+    width: 100vw; /* Utilisation de toute la largeur de l'écran */
+    min-height: 100vh; /* Prend toute la hauteur */
+    padding: 20px; /* Réduit l’espace intérieur */
+    position: relative;
+    z-index: 2;
+    margin-top: -140px; /* Colle au ruban bleu */
+    margin-left: -30px; /* Moves text closer to the left */
+
+}
+
+
+
+
+/* Conteneur du texte */
+.home-content {
+    max-width: 600px; /* Largeur limitée pour une meilleure lisibilité */
+}
+
+/* Titre dans Home */
+/* Titre dans Home */
+.home-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texte sous le titre */
+.home-content p {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+/* ======= Section "Who We Are" ======= */
+
+
+#who-we-are h2 {
+    position: relative;
+    top: 20px; /* Décale vers le haut */
+    left: 50px; /* Décale vers la droite */
+    margin-bottom: 40px; /* Ajoute de l'espace sous le titre */
+    text-align: left; /* Alignement à gauche */
+    font-size: 32px; /* Taille du texte */
+    font-weight: bold;
+    color: #007BFF;
+    
+
+}
+
+
+.team-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligner à gauche */
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* Décalage des images de 2cm vers la droite */
+.team-photo {
+    margin-left: 2cm; 
+}
+
+.team-photo img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style du texte */
+.team-text {
+    width: 60%;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Style des prénoms (en gras et noir) */
+.team-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Style des paragraphes (texte plus petit, non gras, noir) */
+.team-text p {
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+    line-height: 1.5;
+}
+/* Décalage des textes et titres de 1cm vers la droite */
+.team-text {
+    width: 40%;
+    text-align: left;
+    padding: 10px;
+    margin-left: 1cm; /* Décalage du texte */
+}
+
+
+/* ======= Section Design ======= */
+
+
+/* ======= Section Contact ======= */
+/* ======= Section Contact ======= */
+/* ======= Section Contact ======= */
+#contact {
+    background-color: white;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 60px; /* Augmente le padding pour descendre la section */
+}
+
+/* Décalage du titre */
+#contact h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+    left: 50px; /* Décale le titre vers la droite */
+    top: 20px; /* Descend le titre */
+}
+
+/* Décalage des informations de contact */
+#contact p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.6;
+    position: relative;
+    left: 50px; /* Décale le texte vers la droite */
+    top: 30px; /* Descend le texte */
+}
+
+
+
+
+
+/* ======= Section Drone ======= */
+/* ======= Section The Drone ======= */
+#the-drone {
+    width: 65vw; /* Réduit la largeur */
+    margin: auto;
+}
+
+#the-drone h2 {
+    position: relative;
+    left: 50px;
+    top: 20px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Conteneur pour le texte */
+.drone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1400px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.drone-container p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Ajout de l'image du drone centrée et occupant 3/4 de la page */
+.drone-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    margin-top: 20px;
+}
+
+.drone-image-container img {
+    max-width: 75%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+/* ======= Section Telecommunications ======= */
+/* ======= Section Telecommunications ======= */
+/* ======= Section Telecommunications ======= */
+#telecommunications {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Utilise toute la largeur de l'écran */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    min-height: 100vh; /* S'assure qu'elle couvre au moins toute la hauteur */
+    padding: 100px 60px; /* Augmente l’espace intérieur */
+    background-color: white !important; /* Assure un fond blanc */
+    background-image: none !important; /* Supprime toute image de fond */
+    position: relative; /* Assure le bon positionnement */
+    z-index: 10; /* Place la section au-dessus des autres éléments */
+    
+}
+#telecommunications h2.tttt-title {
+    position: relative;
+    top: 20px; /* Descend légèrement le titre */
+    left: 50px; /* Décale vers la droite */
+    font-size: 32px; /* Taille du texte */
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 40px; /* Ajoute de l'espace sous le titre */
+}
+
+/* Style général des titres (Communication de Surface & Transmission Sous-Marine) */
+.telecom-text h3 {
+    font-size: 20px; /* Taille du titre */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 350px; /* Espacement entre le titre et le texte */
+    text-align: left;
+    position: relative;
+    top: 0px; /* Ajuste la position si besoin */
+    left: 0px; /* Aligne bien avec le texte */
+}
+
+/* Alignement du texte sous le titre */
+.telecom-text p {
+    font-size: 16px; /* Taille standard du texte */
+    color: black;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Décalage global de la section Telecommunications */
+.telecom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1400px;
+    margin-left: 50px; /* Décale la section vers la droite */
+    margin-top: 70px; /* Décale toute la section vers le bas */
+}
+
+/* Espacement entre chaque bloc (image + texte) */
+.telecom-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+/* Images plus grandes avec espacement correct */
+.telecom-image img {
+    width: 400px;
+    height: auto;
+    margin-right: 30px;
+}
+
+
+
+
+/* ======= Navigation fluide ======= */
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Assure que Home reste toujours affiché */
+.section.active, #home {
+    display: flex;
+    opacity: 1;
+}
