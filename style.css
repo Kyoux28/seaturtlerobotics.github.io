@@ -399,7 +399,7 @@ body, h1, h2, p {
 @media screen and (max-width: 768px) {
     /* Ajuste la hauteur minimale pour éviter les coupures */
     .section {
-        min-height: 100vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
+        min-height: 150vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
         width: 100vw;
         background-color: white !important; /* Force le fond blanc */
     }
