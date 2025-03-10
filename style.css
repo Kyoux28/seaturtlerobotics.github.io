@@ -397,8 +397,10 @@ body, h1, h2, p {
 
 /* ======= Ajustements pour Mobile ======= */
 @media screen and (max-width: 768px) {
+    
+    /* Empêche l'effet de fixation de l'image de fond sur mobile */
     #home {
-        background-attachment: scroll !important; /* Empêche l'effet de fixation sur mobile */
+        background-attachment: scroll !important; 
         padding-top: 60px; /* Ajoute un espace pour éviter que le home soit caché par la navbar */
     }
     
@@ -418,9 +420,12 @@ body, h1, h2, p {
     }
 
     /* Ajoute un fond blanc en haut pour éviter les coupures */
-    #telecommunications, #the-drone, #contact, #team {
+    #telecommunications, 
+    #the-drone, 
+    #contact, 
+    #team {
         background-color: white !important; /* Force un fond blanc */
-        padding-top: 50px; /* Ajoute un espace pour éviter que le texte touche le haut */
+
     }
 }
 
