@@ -408,7 +408,7 @@ body, h1, h2, p {
     #the-drone, #team, #telecommunications, #contact {
         background-color: white !important; /* Fond blanc forcé */
         background-image: none !important; /* Supprime toute image de fond */
-        padding-top: 50px; /* Ajoute un espace pour éviter que le texte touche la navbar */
+        padding-top: -50px; /* Ajoute un espace pour éviter que le texte touche la navbar */
     }
 
     /* Empêche d'autres images de fond de s'étendre */
