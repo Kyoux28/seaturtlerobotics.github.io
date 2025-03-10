@@ -397,16 +397,12 @@ body, h1, h2, p {
 
 /* ======= Ajustements pour Mobile ======= */
 @media screen and (max-width: 768px) {
-    #telecommunications, #the-drone, #contact, #team {
-    background-color: white !important; /* Force un fond blanc */
-    padding-top: -50px; /* Ajoute un espace pour éviter que le texte touche le haut */
-    }
+    
     /* Ajuste la hauteur minimale pour éviter les coupures */
     .section {
         min-height: 100vh; /* S'assure que chaque section prend toute la hauteur de l'écran */
         width: 100vw;
         background-color: white !important; /* Force le fond blanc */
-
     }
 
     /* Ajuste le conteneur du site */
@@ -417,7 +413,13 @@ body, h1, h2, p {
         background-attachment: fixed;
     }
 
+    /* Ajoute un fond blanc en haut pour éviter les coupures */
+    #telecommunications, #the-drone, #contact, #team {
+        background-color: white !important; /* Force un fond blanc */
+        padding-top: 50px; /* Ajoute un espace pour éviter que le texte touche le haut */
+    }
 }
+
 
 /* ======= Navigation fluide ======= */
 .section {
