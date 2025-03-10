@@ -413,14 +413,6 @@ body, h1, h2, p {
         background-attachment: fixed;
     }
 
-
-
-
-    /* Assure que les images ne dépassent pas */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 /* ======= Navigation fluide ======= */
