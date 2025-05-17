@@ -281,6 +281,40 @@ body, h1, h2, p {
 /* ======= Section Contact ======= */
 /* ======= Section Contact ======= */
 /* ======= Section Contact ======= */
+#contact {
+    background-color: white;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+/* Décalage du titre */
+#contact h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+    left: 50px; /* Décale le titre vers la droite */
+    top: 20px; /* Descend le titre */
+}
+
+/* Décalage des informations de contact */
+#contact p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.6;
+    position: relative;
+    left: 50px; /* Décale le texte vers la droite */
+    top: 30px; /* Descend le texte */
+}
 
 
 
