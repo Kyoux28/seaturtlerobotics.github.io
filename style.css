@@ -248,16 +248,14 @@ body, h1, h2, p {
     top: 20px; /* Descend le titre */
 }
 #video p {
-    font-size: 18px;
-    color: black;
-    margin-bottom: 10px;
-    text-align: left;
+    font-size: 16px;
     line-height: 1.6;
+    color: #333;
+    text-align: left;
     position: relative;
-    left: 450px; /* Décale le texte vers la droite */
-    top: 0px; /* Descend le texte */
+    left: -20px; /* Décale le titre vers la droite */
+    top: 10px; /* Descend le titre */
 }
-
 
 /* Conteneur pour centrer la vidéo */
 .video-center {
@@ -322,52 +320,53 @@ body, h1, h2, p {
 
 /* ======= Section Drone ======= */
 /* ======= Section The Drone ======= */
-#the-drone {
-    width: 65vw; /* Réduit la largeur */
-    margin: auto;
+/* ======= SECTION DRONE ======= */
+
+#the-drone.section {
+    background-color: white;
+    width: 100vw;
+    padding: 40px 0 500px 0; /* 200px en bas pour laisser de la place */
+    box-sizing: border-box;
+
 }
 
+/* Titre */
 #the-drone h2 {
-    position: relative;
-    left: 50px;
-    top: 20px;
-    margin-bottom: 10px;
     font-size: 32px;
     font-weight: bold;
     color: #007BFF;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+    left: 70px; /* Décale le titre vers la droite */
+    top: 40px; /* Descend le titre */
 }
 
-/* Conteneur pour le texte */
+/* Texte et image : même marge */
 .drone-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 90%;
-    max-width: 1400px;
-    margin-left: 50px;
-    margin-top: 20px;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 30px;
 }
 
+/* Texte */
 .drone-container p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.6;
     color: #333;
-    margin-top: 10px;
+    text-align: left;
+    position: relative;
+    left: 0px; /* Décale le titre vers la droite */
+    top: 30px; /* Descend le titre */
 }
 
-/* Ajout de l'image du drone centrée et occupant 3/4 de la page */
-.drone-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Image */
+.drone-container img {
     width: 100%;
-    height: 75vh;
-    margin-top: 20px;
-}
-
-.drone-image-container img {
-    max-width: 75%;
-    max-height: 75vh;
-    object-fit: contain;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px; /* optionnel */
 }
 
 /* ======= Section Telecommunications ======= */
